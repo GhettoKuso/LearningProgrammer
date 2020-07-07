@@ -1,0 +1,20 @@
+# 忽略所有.a格式的文件
+#*.a
+.idea
+
+# 不忽略lib.a这个文件
+#!lib.a
+
+# 仅忽略当前目录下的TODO文件,不忽略子目录下的TODO
+#/TODO
+
+# 忽略build文件夹下的所有文件
+#build/
+.idea/
+target/
+
+# 忽略doc文件夹下的.txt文件,不忽略doc子文件下的.txt文件
+#doc/*.txt
+
+# 忽略doc文件夹下所有的.pdf文件
+#doc/*/.pdf
