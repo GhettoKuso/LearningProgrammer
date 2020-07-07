@@ -9,7 +9,7 @@ public class ReversePolishNotationDemo {
     private Stack<Double> numberStack;
 
     public double calculate(String expresion) throws Exception {
-        String[] arr = expresion.split(" ", -1);
+        String[] arr = expresion.split(" ");
         List<String> list = Arrays.asList(arr);
         numberStack = new Stack<>();
         for (String str:list) {
@@ -49,5 +49,10 @@ public class ReversePolishNotationDemo {
                 throw new Exception("operation is invalid, can't calculate!");
         }
         return result;
+    }
+
+    public double suffixCalculate(String str) throws Exception {
+        InfixTransToSuffix inner = new InfixTransToSuffix();
+        return calculate(inner.convert(str));
     }
 }
