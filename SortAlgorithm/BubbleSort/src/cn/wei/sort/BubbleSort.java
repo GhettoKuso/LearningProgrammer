@@ -47,8 +47,8 @@ public class BubbleSort {
     */
     public int[] sortOptimalize(int[] source) {
         int count = 0;
+        boolean flag = true;
         for (int i = 0; i < source.length; i++) {
-            boolean flag = true;
             for (int j = i; j < source.length; j++) {
                 if (source[i] > source[j]) {
                     int temp = source[i];
@@ -60,6 +60,8 @@ public class BubbleSort {
             }
             if(flag){
                 break;
+            }else{
+                flag=true;
             }
         }
         System.out.println(count);
