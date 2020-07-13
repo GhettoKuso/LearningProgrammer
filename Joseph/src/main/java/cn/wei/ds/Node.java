@@ -1,5 +1,4 @@
 package cn.wei.ds;
-
 public class Node {
     private int index;
     private Node next;
