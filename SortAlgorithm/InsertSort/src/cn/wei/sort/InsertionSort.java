@@ -20,22 +20,17 @@ public class InsertionSort {
      * @author SunWei
      * @date 2020/7/14 23:02
      * @since 0.1.0
-    */
-    public int[] sort(int[] source){
-        int[] result = source;
-        for (int i = 0; i < source.length; i++) {
-            if(i==0){
-                result[i]=source[i];//最开始先从原序列中取出队首元素形成结果序列
-            }else{
-                for (int j = 0; j < i; j++) {
-                    if(result[j]>source[i]){//将原序列中的队首元素放到指定位置上
-                        int temp = result[j];
-                        result[j] = source[i];
-                        source[i]=temp;
-                    }
-                }
+     */
+    public int[] sort(int[] source) {
+        for (int i = 1; i < source.length; i++) {
+            int num = source[i];
+            int leftIndex = i - 1;
+            while (leftIndex > 0 && source[leftIndex] > num) {
+                source[leftIndex + 1] = source[leftIndex];
+                leftIndex--;
             }
+            source[leftIndex + 1] = num;
         }
-        return result;
+        return source;
     }
 }
