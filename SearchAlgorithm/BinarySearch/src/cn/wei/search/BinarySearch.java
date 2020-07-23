@@ -38,7 +38,6 @@ public class BinarySearch {
         }
     }
 
-    private List list = new ArrayList<Integer>();
 
     public List searchEnhance(int arr[],int left,int right,int target){
         if(left>right){ //左指针比右指针大,说明已经找不到目标值了
@@ -46,6 +45,7 @@ public class BinarySearch {
         }else{
             int mid = (left+right)/2; //取中值
             if(arr[mid]==target){
+                List list = new ArrayList<Integer>();
                 list.add(mid);
                 int temp = mid;
                 while (arr[--temp]==target){
