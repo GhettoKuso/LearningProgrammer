@@ -15,7 +15,7 @@ public class EightQueen {
     * array 表示棋盘,array的下标表示行,array的值表示列
     */
     private int[] array = new int[max];
-    private int resultNum = 0;
+    private int resultNum;
 
     public void run() {
         resultNum = 0;
@@ -23,6 +23,15 @@ public class EightQueen {
         System.out.println("the Number of resolver is " + resultNum);
     }
 
+    /**
+     * <p>走棋实现</p>
+     * @param num (下标)表示是第几个皇后
+     * @version 0.1.0
+     * @return void
+     * @author SunWei
+     * @date 2020/7/9 22:41
+     * @since 0.1.0
+    */
     private void runInner(int num) {
         if (num == max) { //如果已经走到下标为8说明是第9个皇后了,表示找到一种解法.
             printResult();
